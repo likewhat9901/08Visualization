@@ -14,7 +14,7 @@ print("="*30)
 header=1은 인덱스 1 즉, 1행을 타이틀로 간주하겠다는 의미이므로
 2행이 타이틀로 인식되어 데이터프레임으로 변환한다. '''
 df2 = pd.read_excel('../resData/남북한_발전_전력량.xlsx',
-                    engine='openpyxl', header=1) # 1부터 데이터 시작
+                    engine='openpyxl', header=1) # 0행이 아니라 1행부터 데이터 시작
 print(df2)
 print("="*30)
 
