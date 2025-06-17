@@ -29,8 +29,8 @@ print(sr_one)
 # 그래프 설정 추가 start
 # 그래프 스타일 지정 : ggplot과 같은 스타일은 URL 참조
 # https://matplotlib.org/stable/gallery/style_sheets/style_sheets_reference.html
-# plt.style.use('ggplot')
-plt.style.use('dark_background')
+plt.style.use('ggplot')
+# plt.style.use('dark_background')
 
 # 그래프 이미지의 전체 사이즈 지정. 14:5로 비율을 설정한다.
 plt.figure(figsize=(14, 5)) # 그래프 크기 설정: 가로 14인치, 세로 5인치 (와이드형 그래프)
@@ -45,7 +45,7 @@ plt.xticks(size=10, rotation=400)
 
 # x, y축 데이터를 plot 함수에 입력
 # 그래프에 마커와 마커사이즈를 지정하여 꺽은선 부분에 표시
-plt.plot(sr_one.index, sr_one.values, marker='o', markersize=10)
+plt.plot(sr_one.index, sr_one.values, marker='', markersize=10)
 # marker='o' : 원형마커
 
 # 타이틀 및 라벨, 폰트 크기 설정

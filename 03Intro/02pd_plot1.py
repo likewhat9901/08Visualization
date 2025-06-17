@@ -6,12 +6,13 @@ df = pd.read_excel('../resData/남북한_발전_전력량.xlsx', engine='openpyx
 print("df", df)
 
 # [0,5] => 엑셀의 2행과 7행을 의미한다.
-# 3: => D열부터 마지막을 의미
+# 3: => 3열부터 마지막을 의미
 # 즉, 남한(0행)과 북한(5행)의 연도별 발전량 데이터만 추출
 df_ns = df.iloc[[0,5], 3:]
 
 # 남북한 데이터에 인덱스를 부여
 df_ns.index = ['South', 'North']
+print(df_ns)
 
 # 열 이름의 자료형을 정수형으로 변경
 print("열 이름의 자료형을 정수형으로 변경\n")

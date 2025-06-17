@@ -51,8 +51,8 @@ plt.annotate('', # 텍스트 표시(화살표이므로 생략)
                  lw=2), # 선 굵기
              )
 plt.annotate('',
-             xytext=(30, 580000),
-             xy=(47, 450000),
+             xytext=('2000', 580000),
+             xy=('2017', 450000),
              xycoords='data',
              arrowprops=dict(
                  arrowstyle='->',
