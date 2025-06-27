@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 '''
 파이차트
     : 원을 파이조각처럼 나누어 표현하는 그래프로 데이터의 크기가
-    클수록 파이가 크게 표현된다.'''
+    클수록 파이가 크게 표현된다.
+'''
 
 # csv파일을 데이터프레임으로 변환
 df = pd.read_csv('../resData/auto-mpg.csv', header=None)
