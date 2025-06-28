@@ -3,6 +3,24 @@ import pandas as pd
 # 데이터 시각화를 위한 모듈
 import matplotlib.pyplot as plt
 
+# 한글깨짐 처리를 위해 폰트매니저 import
+'''
+font_manager : 폰트와 관련된 설정을 도와주는 모듈
+rc : 그래프의 전역 설정을 바꾸는 함수
+'''
+from matplotlib import font_manager, rc
+# 폰트 경로 설정
+font_path = "../resData/malgun.ttf"
+# 폰트 파일의 이름을 속성으로 지정
+'''
+FontProperties(fname=font_path): 해당 경로에 있는 폰트 파일을 가져오는 객체를 생성합니다.
+.get_name(): 이 폰트의 이름을 가져옵니다. 예를 들어 Malgun Gothic 같은 이름입니다.
+이걸 사용하는 이유는 폰트 이름은 파일 이름과 다를 수 있어서, 실제 matplotlib에서 인식할 수 있는 이름을 가져오기 위해 필요합니다.
+'''
+font_name = font_manager.FontProperties(fname=font_path).get_name()
+# 폰트 적용
+# rc('font', family=...): matplotlib에서 사용하는 기본 폰트를 설정
+rc('font', family=font_name)
 
 # 엑셀 파일을 데이터프레임으로 변환. header가 0이므로 첫번째 행은 타이틀로 인식하여 제외
 df = pd.read_excel('../resData/시도별_전출입_인구수.xlsx',
